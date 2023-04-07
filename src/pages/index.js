@@ -64,6 +64,7 @@ export default function Home() {
                   <img
                     className="lg:max-w-lg h-72 lg:min-w-full lg:h-80"
                     src="/profile-good.png"
+                    alt="profile-picture"
                   />
                 </div>
                 <div className="lg:max-w-xl lg:text-left pt-10">
@@ -177,6 +178,7 @@ export default function Home() {
                       height={400}
                       cover
                       src="/ecommerce_sc.png"
+                      alt="ecommerce project"
                     />
                   </div>
                   <div className="lg:w-full lg:px-10">
@@ -217,6 +219,7 @@ export default function Home() {
                       height={400}
                       cover
                       src="/youtube-project.png"
+                      alt="youtube 2 mp3 project"
                     />
                   </div>
                   <div className="lg:w-full lg:px-10">
@@ -262,6 +265,7 @@ export default function Home() {
                       height={400}
                       cover
                       src="/portfolio_sc.png"
+                      alt="portfolio project"
                     />
                   </div>
                   <div className="lg:w-full lg:px-10">
@@ -294,6 +298,7 @@ export default function Home() {
                       height={400}
                       cover
                       src="/todo_sc.png"
+                      alt="to do app project"
                     />
                   </div>
                   <div className="lg:w-full lg:px-10">
