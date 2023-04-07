@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact } from "react-icons/di";
-import { SiTailwindcss, SiSass, SiJavascript } from "react-icons/si";
+import { SiTailwindcss, SiSass, SiJavascript, SiRedux } from "react-icons/si";
 import { BsBoxArrowUpRight, BsFillTelephoneFill } from "react-icons/bs";
 import { BiMailSend } from "react-icons/bi";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export default function Home() {
         <nav className="p-8  flex justify-between">
           <h1 className="text-xl font-semibold">christian.dev</h1>
           <ul className="flex items-center">
-            <li>
+            {/*             <li>
               <a
                 className="text-neutral-900 font-semibold px-4 py-2"
                 href="#home"
@@ -35,7 +35,7 @@ export default function Home() {
               >
                 About
               </a>
-            </li>
+            </li> */}
             {/*               <li>
                 <a
                   className="text-neutral-900 font-semibold px-4 py-2"
@@ -109,6 +109,11 @@ export default function Home() {
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
+                <SiRedux />
+              </div>
+
+              <div className=" bg-white rounded-full w-fit p-3 shadow-md">
+                {" "}
                 <DiReact />
               </div>
 
@@ -163,8 +168,48 @@ export default function Home() {
               <h4 className="text-xl font-bold  pb-10 text-sky-500 lg:pb-10">
                 PORTFOLIO
               </h4>
-              <ul>
+              <ul className="flex flex-col gap-10">
                 <li className="bg-white  lg:flex lg:flex-row shadow-lg p-5 rounded-3xl">
+                  <div className="flex justify-center">
+                    <Image
+                      className="rounded-2xl shadow-md lg:max-w-fit"
+                      width={400}
+                      height={400}
+                      cover
+                      src="/ecommerce_sc.png"
+                    />
+                  </div>
+                  <div className="lg:w-full lg:px-10">
+                    <h3 className="text-2xl font-bold  p-5">E-Commerce 🛒</h3>
+                    <p className="text-neutral-500 px-5">
+                      With a focus on simplicity and clean design, this store
+                      prioritize user experience, making it easy for customers
+                      to find and purchase the products they need.
+                    </p>
+                    <div className="flex justify-center gap-5 p-5 font-bold">
+                      <p className="bg-white shadow-md py-3 px-5">React</p>
+                      <p className="bg-white shadow-md py-3 px-5">Redux</p>
+                      <p className="bg-white shadow-md py-3 px-5">Sass</p>
+                    </div>
+                    <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://github.com/cc-lau/e-commerce-site"
+                        target="_blank"
+                      >
+                        Code <AiFillGithub />
+                      </a>
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://cc-lau.github.io/e-commerce-site/"
+                        target="_blank"
+                      >
+                        Live Demo <BsBoxArrowUpRight />
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li className="bg-white  lg:flex  shadow-lg p-5 rounded-3xl lg:flex-row-reverse">
                   <div className="flex justify-center">
                     <Image
                       className="rounded-2xl shadow-md lg:max-w-fit"
@@ -185,7 +230,7 @@ export default function Home() {
                       an interface for converting a youtube link and downloading
                       the converted audio.
                     </p>
-                    <div className="flex justify-center gap-10 p-5 font-bold">
+                    <div className="flex justify-center gap-5 p-5 font-bold">
                       <p className="bg-white shadow-md py-3 px-5">React</p>
                       <p className="bg-white shadow-md py-3 px-5">
                         Vanilla CSS
@@ -202,6 +247,80 @@ export default function Home() {
                       <a
                         className="flex items-center gap-2"
                         href="https://cc-lau.github.io/yt-2-mp3/"
+                        target="_blank"
+                      >
+                        Live Demo <BsBoxArrowUpRight />
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li className="bg-white  lg:flex lg:flex-row shadow-lg p-5 rounded-3xl">
+                  <div className="flex justify-center">
+                    <Image
+                      className="rounded-2xl shadow-md lg:max-w-fit"
+                      width={400}
+                      height={400}
+                      cover
+                      src="/portfolio_sc.png"
+                    />
+                  </div>
+                  <div className="lg:w-full lg:px-10">
+                    <h3 className="text-2xl font-bold  p-5">Portfolio 💼</h3>
+                    <p className="text-neutral-500 px-5">
+                      With a focus on simplicity and clean design, this
+                      portfolio showcases all of my current experience and
+                      projects.
+                    </p>
+                    <div className="flex justify-center gap-5 p-5 font-bold">
+                      <p className="bg-white shadow-md py-3 px-5">React</p>
+                      <p className="bg-white shadow-md py-3 px-5">Tailwind</p>
+                    </div>
+                    <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://github.com/cc-lau/e-commerce-site"
+                        target="_blank"
+                      >
+                        Code <AiFillGithub />
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li className="bg-white  lg:flex  shadow-lg p-5 rounded-3xl lg:flex-row-reverse">
+                  <div className="flex justify-center">
+                    <Image
+                      className="rounded-2xl shadow-md lg:max-w-fit"
+                      width={400}
+                      height={400}
+                      cover
+                      src="/todo_sc.png"
+                    />
+                  </div>
+                  <div className="lg:w-full lg:px-10">
+                    <h3 className="text-2xl font-bold  p-5">To-Do App 📅</h3>
+                    <p className="text-neutral-500 px-5">
+                      A To-Do App is a simple CRUD application that allows users
+                      to add, edit and delete tasks. Users are able to sort
+                      tasks into projects and sort by certain parameters. This
+                      To-Do App demonstrates strong JS fundamentals.
+                    </p>
+                    <div className="flex justify-center gap-5 p-5 font-bold">
+                      <p className="bg-white shadow-md py-3 px-5">React</p>
+                      <p className="bg-white shadow-md py-3 px-5">
+                        Vanilla CSS
+                      </p>
+                    </div>
+                    <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://github.com/cc-lau/todo-list"
+                        target="_blank"
+                      >
+                        Code <AiFillGithub />
+                      </a>
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://cc-lau.github.io/todo-list/"
                         target="_blank"
                       >
                         Live Demo <BsBoxArrowUpRight />
