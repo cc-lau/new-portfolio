@@ -278,7 +278,7 @@ export default function Home() {
                     <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
                       <a
                         className="flex items-center gap-2"
-                        href="https://github.com/cc-lau/e-commerce-site"
+                        href="https://github.com/cc-lau/new-portfolio"
                         target="_blank"
                       >
                         Code <AiFillGithub />
