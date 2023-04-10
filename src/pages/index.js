@@ -72,7 +72,7 @@ export default function Home() {
                     Front-End React Developer
                   </h2>
                   <p className="text-lg py-5 leading-8 font-normal text-neutral-500">
-                    Hi, I'm Christian Lau. A passionate Front-end React
+                    Hi, I&apos;m Christian Lau. A passionate Front-end React
                     Developer based in Salt Lake City, Utah. 📍
                   </p>
                   <div className="lg:justify-start text-4xl flex justify-center gap-2 py-3">
