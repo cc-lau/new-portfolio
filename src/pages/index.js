@@ -203,7 +203,7 @@ export default function Home() {
                       </a>
                       <a
                         className="flex items-center gap-2"
-                        href="https://cc-lau.github.io/e-commerce-site/"
+                        href="https://e-commerce-site-six.vercel.app/"
                         target="_blank"
                       >
                         Live Demo <BsBoxArrowUpRight />
