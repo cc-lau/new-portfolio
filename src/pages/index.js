@@ -1,5 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import Head from "next/head";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact } from "react-icons/di";
 import { SiTailwindcss, SiSass, SiJavascript, SiRedux } from "react-icons/si";
@@ -8,6 +10,8 @@ import { BiMailSend } from "react-icons/bi";
 import Image from "next/image";
 
 export default function Home() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -17,46 +21,165 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="sticky top-0 z-30 w-full bg-white shadow-xl">
-        <nav className="p-8  flex justify-between">
-          <h1 className="text-xl font-semibold">christian.dev</h1>
-          <ul className="flex items-center">
-            {/*             <li>
-              <a
-                className="text-neutral-900 font-semibold px-4 py-2"
-                href="#home"
+        <nav className="p-8 flex justify-between items-center">
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <h1 className="text-xl font-semibold cursor-default">
+              christian.dev
+            </h1>
+          </Link>
+          <div
+            className="HAMBURGER-ICON space-y-2 lg:hidden block"
+            onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
+          >
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
+          </div>
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+            {" "}
+            <div
+              className="CROSS-ICON absolute flex flex-col justify-center w-full top-0 right-0 px-8 py-8"
+              onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
+            >
+              <div className="flex justify-end">
+                <svg
+                  className="h-8 w-8 text-gray-600"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
+              <ul className="flex flex-col gap-6 mt-20 items-center text-xl">
+                <li>
+                  <Link
+                    className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul className="lg:flex hidden items-center text-xl">
+            <li>
+              <Link
+                className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-neutral-900 font-semibold px-4 py-2"
-                href="#about"
+              <Link
+                className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
               >
                 About
-              </a>
-            </li> */}
-            {/*               <li>
-                <a
-                  className="text-neutral-900 font-semibold px-4 py-2"
-                  href="#projects"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-neutral-900 font-semibold px-4 py-2"
-                  href="#contact"
-                >
-                  Contact
-                </a>
-              </li> */}
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-neutral-900 font-semibold px-4 py-2 cursor-default"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
       <main className="bg-slate-50">
-        <section className="min-h-screen px-10">
+        <section title="home" id="home" className="min-h-screen px-10">
           <div className="lg:max-w-5xl lg:m-auto lg:pt-28">
             <div className="lg:flex lg:justify-center">
               <div className="lg:flex lg:flex-row-reverse lg:items-center lg:gap-28 text-center pt-10 text-neutral-700">
@@ -131,7 +254,7 @@ export default function Home() {
         </section>
 
         {/* ABOUT ME SECTION */}
-        <section className="bg-white px-10">
+        <section title="about" id="about" className="bg-white px-10">
           <div className="lg:flex lg:justify-center">
             <div className="lg:max-w-5xl">
               <div className="lg:flex lg:items-center lg:gap-10 lg:p-0 lg:py-28 text-center text-neutral-700 py-10">
@@ -163,7 +286,7 @@ export default function Home() {
         </section>
 
         {/*PROJECTS SECTION*/}
-        <section className="bg-slate-50 px-10">
+        <section title="projects" id="projects" className="bg-slate-50 px-10">
           <div className="lg:flex lg:justify-center">
             <div className="text-center text-neutral-700 py-10 lg:p-0 lg:py-16 lg:max-w-5xl ">
               <h4 className="text-xl font-bold  pb-10 text-sky-500 lg:pb-10">
@@ -204,6 +327,50 @@ export default function Home() {
                       <a
                         className="flex items-center gap-2"
                         href="https://e-commerce-site-six.vercel.app/"
+                        target="_blank"
+                      >
+                        Live Demo <BsBoxArrowUpRight />
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li className="bg-white  lg:flex lg:flex-row shadow-lg p-5 rounded-3xl">
+                  <div className="flex justify-center">
+                    <Image
+                      className="rounded-2xl shadow-md lg:max-w-fit"
+                      width={400}
+                      height={400}
+                      cover
+                      src="/password_gen_sc.png"
+                      alt="password generator project"
+                    />
+                  </div>
+                  <div className="lg:w-full lg:px-10">
+                    <h3 className="text-2xl font-bold  p-5">
+                      Password Generator 🔑
+                    </h3>
+                    <p className="text-neutral-500 px-5">
+                      This password generator project is a tool that allows
+                      users to generate strong, random passwords with
+                      customizable options such as length and character types.
+                      It uses built-in JavaScript functions and logic to
+                      demonstrate strong JavaScript fundamentals.
+                    </p>
+                    <div className="flex justify-center gap-5 p-5 font-bold">
+                      <p className="bg-white shadow-md py-3 px-5">React</p>
+                      <p className="bg-white shadow-md py-3 px-5">Tailwind</p>
+                    </div>
+                    <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://github.com/cc-lau/password-generator"
+                        target="_blank"
+                      >
+                        Code <AiFillGithub />
+                      </a>
+                      <a
+                        className="flex items-center gap-2"
+                        href="https://password-generator-cc-lau.vercel.app/"
                         target="_blank"
                       >
                         Live Demo <BsBoxArrowUpRight />
@@ -257,39 +424,7 @@ export default function Home() {
                     </div>
                   </div>
                 </li>
-                <li className="bg-white  lg:flex lg:flex-row shadow-lg p-5 rounded-3xl">
-                  <div className="flex justify-center">
-                    <Image
-                      className="rounded-2xl shadow-md lg:max-w-fit"
-                      width={400}
-                      height={400}
-                      cover
-                      src="/portfolio_sc.png"
-                      alt="portfolio project"
-                    />
-                  </div>
-                  <div className="lg:w-full lg:px-10">
-                    <h3 className="text-2xl font-bold  p-5">Portfolio 💼</h3>
-                    <p className="text-neutral-500 px-5">
-                      With a focus on simplicity and clean design, this
-                      portfolio showcases all of my current experience and
-                      projects.
-                    </p>
-                    <div className="flex justify-center gap-5 p-5 font-bold">
-                      <p className="bg-white shadow-md py-3 px-5">React</p>
-                      <p className="bg-white shadow-md py-3 px-5">Tailwind</p>
-                    </div>
-                    <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
-                      <a
-                        className="flex items-center gap-2"
-                        href="https://github.com/cc-lau/new-portfolio"
-                        target="_blank"
-                      >
-                        Code <AiFillGithub />
-                      </a>
-                    </div>
-                  </div>
-                </li>
+
                 <li className="bg-white  lg:flex  shadow-lg p-5 rounded-3xl lg:flex-row-reverse">
                   <div className="flex justify-center">
                     <Image
@@ -310,7 +445,7 @@ export default function Home() {
                       To-Do App demonstrates strong JS fundamentals.
                     </p>
                     <div className="flex justify-center gap-5 p-5 font-bold">
-                      <p className="bg-white shadow-md py-3 px-5">React</p>
+                      <p className="bg-white shadow-md py-3 px-5">JavaScript</p>
                       <p className="bg-white shadow-md py-3 px-5">
                         Vanilla CSS
                       </p>
@@ -338,7 +473,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white px-10">
+        <section title="contact" id="contact" className="bg-white px-10">
           <div className="lg:max-w-5xl lg:flex lg:justify-start m-auto">
             <div className="text-center text-neutral-700 py-10 lg:p-0 lg:py-24 lg:text-left">
               <h4 className="text-2xl font-bold p-2.5 text-sky-500">CONTACT</h4>
