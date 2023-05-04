@@ -203,10 +203,10 @@ export default function Home() {
                       href="https://www.linkedin.com/in/christian-lau-436431260/"
                       target="_blank"
                     >
-                      <AiFillLinkedin />
+                      <AiFillLinkedin className="hover:text-sky-500 transition-colors" />
                     </a>
                     <a href="https://github.com/cc-lau" target="_blank">
-                      <AiFillGithub />
+                      <AiFillGithub className="hover:text-sky-500 transition-colors" />
                     </a>
                   </div>
                 </div>
@@ -318,14 +318,14 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://github.com/cc-lau/e-commerce-site"
                         target="_blank"
                       >
                         Code <AiFillGithub />
                       </a>
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://e-commerce-site-six.vercel.app/"
                         target="_blank"
                       >
@@ -334,7 +334,7 @@ export default function Home() {
                     </div>
                   </div>
                 </li>
-                <li className="bg-white  lg:flex lg:flex-row shadow-lg p-5 rounded-3xl">
+                <li className="bg-white  lg:flex lg:flex-row-reverse shadow-lg p-5 rounded-3xl">
                   <div className="flex justify-center">
                     <Image
                       className="rounded-2xl shadow-md lg:max-w-fit"
@@ -362,14 +362,14 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://github.com/cc-lau/password-generator"
                         target="_blank"
                       >
                         Code <AiFillGithub />
                       </a>
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://password-generator-cc-lau.vercel.app/"
                         target="_blank"
                       >
@@ -378,7 +378,7 @@ export default function Home() {
                     </div>
                   </div>
                 </li>
-                <li className="bg-white  lg:flex  shadow-lg p-5 rounded-3xl lg:flex-row-reverse">
+                <li className="bg-white  lg:flex  shadow-lg p-5 rounded-3xl lg:flex-row">
                   <div className="flex justify-center">
                     <Image
                       className="rounded-2xl shadow-md lg:max-w-fit"
@@ -408,14 +408,14 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://github.com/cc-lau/yt-2-mp3"
                         target="_blank"
                       >
                         Code <AiFillGithub />
                       </a>
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://cc-lau.github.io/yt-2-mp3/"
                         target="_blank"
                       >
@@ -452,14 +452,14 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center gap-10 px-6 font-semibold text-xl">
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://github.com/cc-lau/todo-list"
                         target="_blank"
                       >
                         Code <AiFillGithub />
                       </a>
                       <a
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:text-sky-500 transition-colors"
                         href="https://cc-lau.github.io/todo-list/"
                         target="_blank"
                       >
@@ -515,10 +515,10 @@ export default function Home() {
                 href="https://www.linkedin.com/in/christian-lau-436431260/"
                 target="_blank"
               >
-                <AiFillLinkedin />
+                <AiFillLinkedin className="hover:text-sky-500 transition-colors" />
               </a>
               <a href="https://github.com/cc-lau" target="_blank">
-                <AiFillGithub />
+                <AiFillGithub className="hover:text-sky-500 transition-colors" />
               </a>
             </div>
           </div>
