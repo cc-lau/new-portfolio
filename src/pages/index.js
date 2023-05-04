@@ -180,9 +180,9 @@ export default function Home() {
       </header>
       <main className="bg-slate-50">
         <section title="home" id="home" className="min-h-screen px-10">
-          <div className="lg:max-w-5xl lg:m-auto lg:pt-28">
+          <div className="lg:max-w-5xl lg:m-auto lg:pt-28 pt-10">
             <div className="lg:flex lg:justify-center">
-              <div className="lg:flex lg:flex-row-reverse lg:items-center lg:gap-28 text-center pt-10 text-neutral-700">
+              <div className="lg:flex lg:flex-row-reverse lg:items-center lg:gap-28 text-center text-neutral-700">
                 <div className="flex justify-center mx-auto rounded-full overflow-hidden min-w-fit">
                   <img
                     className="lg:max-w-lg h-72 lg:min-w-full lg:h-80"
@@ -219,35 +219,40 @@ export default function Home() {
             </h4>
             <div className="text-4xl flex flex-wrap justify-center gap-5 py-10">
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
-                <AiFillHtml5 />
+                <Image width={50} height={50} src="/html.svg" />
               </div>
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
-                <DiCss3 />
+                <Image width={50} height={50} src="/css.svg" />
               </div>
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
-                <SiJavascript />
+                <Image width={50} height={50} src="/javascript.svg" />
               </div>
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
-                <SiRedux />
+                <Image width={50} height={50} src="/react.svg" />
               </div>
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
-                <DiReact />
+                <Image width={50} height={50} src="/redux.svg" />
               </div>
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
-                <SiTailwindcss />
+                <Image
+                  className="mt-2"
+                  width={50}
+                  height={50}
+                  src="/tailwind.svg"
+                />
               </div>
 
               <div className=" bg-white rounded-full w-fit p-3 shadow-md">
                 {" "}
-                <SiSass />
+                <Image width={50} height={50} src="/scss.svg" />
               </div>
             </div>
           </div>
@@ -311,7 +316,7 @@ export default function Home() {
                       prioritize user experience, making it easy for customers
                       to find and purchase the products they need.
                     </p>
-                    <div className="flex justify-center gap-5 p-5 font-bold">
+                    <div className="flex justify-center lg:gap-5 p-5 font-bold gap-3 lg:text-md text-sm">
                       <p className="bg-white shadow-md py-3 px-5">React</p>
                       <p className="bg-white shadow-md py-3 px-5">Redux</p>
                       <p className="bg-white shadow-md py-3 px-5">Sass</p>
